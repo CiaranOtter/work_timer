@@ -74,16 +74,18 @@ export class Clock {
         this.updateClockElement();
         let t = setTimeout(() => {
             this.tick();
-        }, 200);
+        }, 1000);
         
     }
 
     startClock() {
         this.running = true;
+        this.updateClockElement();
     }
 
     pauseClock() {
         this.running = false;
+        this.updateClockElement();
     }
 
     stopClock() {
